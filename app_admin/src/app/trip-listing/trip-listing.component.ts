@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from "@angular/router";
 //import { trips } from '../data/trips';
-import { TripDataService } from 'services/trip-data.service';
-import { Trip } from 'models/trip';
+import { TripDataService } from 'src/app/services/trip-data.service';
+import { Trip } from 'src/app/models/trip';
 
 @Component({
   selector: 'app-trip-listing',
@@ -20,6 +20,7 @@ export class TripListingComponent implements OnInit {
     ) { }
 
     private addTrip(): void{
+      console.log('Inside TripListingComponent#addTrip');
       this.router.navigate(['add-trip']);
     }
   
